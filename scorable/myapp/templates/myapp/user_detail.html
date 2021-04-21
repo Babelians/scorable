@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <p><img src="{{ my.face.url }}" style="width: 100px; height: 100px;"/></p>
+    {{ user.username }}
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+    <button type="submit">submit</button>
+    {% for post in posts %}
+        <div class="post">
+            <a href="{% url 'score_detail' pk=post.pk %}"><img src="{{ post.art.url }}" style="width: 200px; height: 200px;"/></a>
+            <h2><a href="{% url 'score_detail' pk=post.pk %}">{{ post.albam_title }}</a></h2>
+            <p>{{ post.artist.username }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}

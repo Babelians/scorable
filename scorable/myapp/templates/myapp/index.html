@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for post in posts %}
+        <div class="post">
+            <a href="{% url 'score_detail' pk=post.pk %}"><img src="{{ post.art.url }}" style="width: 200px; height: 200px;"/></a>
+            <p>{{ post.albam_title }}{{ post.artist.username }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}

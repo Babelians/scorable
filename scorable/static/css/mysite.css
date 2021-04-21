@@ -1,0 +1,59 @@
+html{
+    user-select: none; /*写真クリック反応無効*/
+}
+body {
+    margin: 0 auto;
+    color: #ffffff;
+    background-color: #070707;
+}
+
+.header {
+    background-color: rgba(07, 07, 07, 0.7);
+    z-index: 9999;
+    width:100%;
+    position: fixed;
+    box-shadow: 0px 0px 5px 0px rgb(82, 0, 0);
+}
+
+/* heightはalign-itemsと同じ場所におく */
+.container {
+    height: 60px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    vertical-align: bottom;
+}
+
+.footer {
+    background-color: rgba(63, 63, 63, 1);
+    z-index: 9990;
+    width:100%;
+    bottom: 0;
+    position: fixed;
+}
+
+.fcontainer{
+    height: 55px;
+    display: flex;
+    align-items: center;
+}
+
+.content {
+    margin-left: 40px;
+    padding-top: 80px;
+}
+
+.passive{
+    display: none;
+}
+
+/*.scorez {
+    background-color: #181818;
+    color: black;
+    width: 1350px;
+    height: 800px;
+    margin-left: 5%;
+    position: relative;
+}
+
+
